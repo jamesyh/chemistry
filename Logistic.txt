@@ -1,0 +1,14 @@
+model {
+for(i in 1:n){
+result[i] ~ dbern(theta[i]);
+logit(theta[i]) <- beta0 + inprod(X[i,],beta)
+}
+
+for (j in 1:p) {
+beta[j]~dnorm(0,0.001)
+}
+
+
+beta0 ~ dnorm(0,1);
+
+}

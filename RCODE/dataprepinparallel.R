@@ -1,31 +1,44 @@
+library(parallel)
 library(tidyverse)
+
+
+
+
+
+
 
 csvfiles = readLines("http://www.basketballgeek.com/downloads/2009-2010/")
 csvfiles = data.frame( file = csvfiles[6:1220]  )
 csvfiles = separate(csvfiles , "file" , c("1","2" ) ,sep = "\'")
+csvfiles = csvfiles[,2]
+csvfiles = csvfiles[-c(181,184,187)]
 
 
-for(i in 1:nrow(csvfiles)) {
 
-  if(i %in% c(181,184,187)) next
-
-  sub =  read.csv( paste0("http://www.basketballgeek.com/downloads/2009-2010/",csvfiles[i,2]) )
-
-  sub$fileName = csvfiles[i,2]
+pullData = function(filename){
   
-  if(i == 1) catch = sub
-  else catch = rbind(catch , sub)
-  
-  print(i)
-  }
+  sub = read.csv(paste0("http://www.basketballgeek.com/downloads/2009-2010/",filename))
+  sub$filename = filename 
+   
+  sub = list( as.data.frame( sub ))
+  return(sub)  
+}
+
+no_cores <- detectCores() - 1
+cl <- makeCluster(no_cores)
+
+catch = parSapply(cl, csvfiles, pullData)
+
+stopCluster(cl)
+
+nextcatch = do.call(rbind, catch)
 
 
 
+nextcatch = nextcatch[nextcatch$etype == "shot" , ]
 
-catch = catch[catch$etype == "shot" , ]
-
-away = catch[,c("a1","a2","a3","a4","a5","player","result","type","fileName","team")]
-home = catch[,c("h1","h2","h3","h4","h5","player","result","type","fileName","team")]
+away = nextcatch[,c("a1","a2","a3","a4","a5","player","result","type","filename","team")]
+home = nextcatch[,c("h1","h2","h3","h4","h5","player","result","type","filename","team")]
 
 for(i in 1:ncol(away)){ away[,i] = as.character( away[,i] ) }
 for(i in 1:ncol(away)){ home[,i] = as.character( home[,i] ) }
@@ -49,8 +62,12 @@ inLineupHome = function(x){
 }
 
 
-away = away[sapply(1:nrow(away), inLineupAway) , ]
-home = home[sapply(1:nrow(home), inLineupHome) , ]
+
+away = away[sapply( 1:nrow(away), inLineupAway) , ]
+home = home[sapply( 1:nrow(home), inLineupHome) , ]
+
+
+
 
 away$Place = "away"
 home$Place = "home"
@@ -65,7 +82,7 @@ for(x in 1:nrow(both)){
   
   both[x,1:5] = both[x,1:5][ order( both[x,1:5] ) ]
   
-
+  
   
 }
 
@@ -112,7 +129,7 @@ for(i in players){
   
   lakers[ grepl( i , paste(lakers$player1,lakers$player2,lakers$player3,lakers$player4,lakers$player5) ) , i ] = 1
   
-  lakers[,i] as.factor(lakers[,i])
+  # lakers[,i] as.factor(lakers[,i])
   
   
 }
@@ -147,4 +164,8 @@ final = as.data.frame(final)
 names(final) = gsub(" ","",names(final))
 
 
-save.image("NBA2009.RData")
+# save.image("NBA2009.RData")
+
+
+
+
