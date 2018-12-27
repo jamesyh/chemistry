@@ -91,7 +91,7 @@ for(x in 1:nrow(both)){
 
 
 
-both$result =  as.numeric( ifelse(both$result == "made",1,0) )
+# both$result =  as.numeric( ifelse(both$result == "made",1,0) )
 
 
 lakers = both[both$team == "LAL" , ]
