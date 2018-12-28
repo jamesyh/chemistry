@@ -30,7 +30,18 @@ Hypothesis 2: The probability of scoring is greater for 5 players in model 2 tha
 Hypothesis 1 is essentially asking if a specific set of 5 players play better together than they normally do. Hypthesis 2 is asking if there are 5 players who play worse when they are on the court at the same time.
 
 
+# Results
+
+The following table shows 10 lineups that prove Hypothesis 1. For these 10 lineups when the 5 players are together the probability of them scoring is greater than when they are not playing together. The column count is the number of times the lineup shot the basketball. Total is the total shots that the team made during the season. Percent shows the percent the lineup made of all the shots.
+
+For the plot of the distribution I chose Boston's lineup consisting of Kevin Garnett, Paul Pierce, Rajon Rondo, Rasheed Wallace, and Ray Allen. These players play better together and have chemistry on the court. 
+
 ![alt text](https://github.com/jamesyh/chemistry/blob/master/images/chemistry-index.png)
 ![alt text](https://github.com/jamesyh/chemistry/blob/master/images/boston-chemistry.png)
+
+The following table shows 10 lineups for what i've called anti-chemistry. Which is when the probility of the team scoring goes down when those 5 players are on the floor.
+
+For the plot of the distribution I chose Orlando's lineup of Dwight Howard, Jameer Nelson, Matt Barnes, Rashard Lewis, and Vince Carter.
+
 ![alt text](https://github.com/jamesyh/chemistry/blob/master/images/anti-chemistry-index.png)
 ![alt text](https://github.com/jamesyh/chemistry/blob/master/images/orlando-anti-chemistry.png)
