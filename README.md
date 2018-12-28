@@ -1,10 +1,10 @@
 # Chemistry in 2009-10 NBA data
 
 # Introduction
-People often refer to a group of players as having chemistry or that they play better together than alone. The current warriors have their "death-lineup" which many claim is the best collective group on the floor in today's game. One of my favorite references to chemistry in sports is Ricky Bobby's and his partners "shake-and-bake" where they used team work to win nascar races. For this project I created two seperate bayesian models to compare chemistry. 
+People often refer to a group of players as having chemistry or that they play better together than alone. The current warriors have their "death-lineup" which many claim is the best collective group on the floor in today's game. One of my favorite references to chemistry in sports is Ricky Bobby's and his partners "shake-and-bake" where they used team work to win nascar races. For this project, I created two separate Bayesian models to compare chemistry. 
 
 # Model
-The main objective in basketball is to get the ball through the net at a higher rate than your opponets. For this project the dependent variable is wether the team scored or not. For model 1, I modeled the dependent variable with a Bernoulli likelihood with the parameter ![theta](https://latex.codecogs.com/gif.latex?%7B%5Ctheta_i%7D) where i goes from 1 to the number of unique five player lineups a team has. For the prior distribution, I used a Beta distributions with parameters 1 and 1. With Model 2, I also chose to use a bernoulli likelihood to model ![theta](https://latex.codecogs.com/gif.latex?%7B%5Ctheta%7D) but I used logistic regression model as my prior. Each ![beta](https://latex.codecogs.com/gif.latex?%7B%5Cbeta_k%7D) represents a player on the team for k from 1 to l. I used normal distributions as the priors for each ![beta](https://latex.codecogs.com/gif.latex?%7B%5Cbeta).
+The main objective in basketball is to get the ball through the net at a higher rate than your opponents. For this project the dependent variable is whether the team scored or not. For model 1, I modeled the dependent variable with a Bernoulli likelihood with the parameter ![theta](https://latex.codecogs.com/gif.latex?%7B%5Ctheta_i%7D) where i goes from 1 to the number of unique five player lineups a team has. For the prior distribution, I used a Beta distributions with parameters 1 and 1. With Model 2, I also chose to use a Bernoulli likelihood to model ![theta](https://latex.codecogs.com/gif.latex?%7B%5Ctheta%7D) but I used logistic regression model as my prior. Each ![beta](https://latex.codecogs.com/gif.latex?%7B%5Cbeta_k%7D) represents a player on the team for k from 1 to l. I used normal distributions as the priors for each ![beta](https://latex.codecogs.com/gif.latex?%7B%5Cbeta).
 
 
 Model 1:<br/>
@@ -21,13 +21,13 @@ Priors<br/>
 ![](https://latex.codecogs.com/gif.latex?%7B%5Cbeta_k%20%24%5Csim%24%20Norm%280%2C1%29%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2Ck%3D1%2C...%2Cl%7D)
 
 # Hypotheses
-There are two seperate hypotheses that I tested using these two models.
+There are two separate hypotheses that I tested using these two models.
 
 Hypothesis 1: The probability of scoring is greater for the lineup modeled in model 1 than the probability of those same 5 players in model 2.
 
 Hypothesis 2: The probability of scoring is greater for 5 players in model 2 than the probability of the corresponding lineup from model 1.
 
-Hypothesis 1 is essentially asking if a specific set of 5 players play better together than they normally do. Hypthesis 2 is asking if there are 5 players who play worse when they are on the court at the same time.
+Hypothesis 1 is essentially asking if a specific set of 5 players play better together than they normally do. Hypothesis 2 is asking if there are 5 players who play worse when they are on the court at the same time.
 
 
 # Results
@@ -39,7 +39,7 @@ For the plot of the distribution I chose Boston's lineup consisting of Kevin Gar
 ![alt text](https://github.com/jamesyh/chemistry/blob/master/images/chemistry-index.png)
 ![alt text](https://github.com/jamesyh/chemistry/blob/master/images/boston-chemistry.png)
 
-The following table shows 10 lineups for what i've called anti-chemistry. Which is when the probility of the team scoring goes down when those 5 players are on the floor.
+The following table shows 10 lineups for what i've called anti-chemistry. Which is when the probability of the team scoring goes down when those 5 players are on the floor.
 
 For the plot of the distribution I chose Orlando's lineup of Dwight Howard, Jameer Nelson, Matt Barnes, Rashard Lewis, and Vince Carter.
 
