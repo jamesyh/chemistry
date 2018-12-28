@@ -32,16 +32,16 @@ Hypothesis 1 is essentially asking if a specific set of 5 players play better to
 
 # Results
 
-The following table shows 10 lineups that prove Hypothesis 1. For these 10 lineups when the 5 players are together the probability of them scoring is greater than when they are not playing together. The column count is the number of times the lineup shot the basketball. Total is the total shots that the team made during the season. Percent shows the percent the lineup made of all the shots.
+The following table shows 10 lineups that prove Hypothesis 1. For these 10 lineups when the 5 players are together the probability of them scoring is greater than when they are not playing together. The column count is the number of times the lineup shot the basketball. Total is the total shots that the team made during the season. Percent shows the percent the lineup made of all the teams shots.
 
 For the plot of the distribution I chose Boston's lineup consisting of Kevin Garnett, Paul Pierce, Rajon Rondo, Rasheed Wallace, and Ray Allen. These players play better together and have chemistry on the court. 
 
 ![alt text](https://github.com/jamesyh/chemistry/blob/master/images/chemistry-index.png)
 ![alt text](https://github.com/jamesyh/chemistry/blob/master/images/boston-chemistry.png)
 
-The following table shows 10 lineups for what i've called anti-chemistry. Which is when the probability of the team scoring goes down when those 5 players are on the floor.
+The following table shows 10 lineups for what i've called anti-chemistry. Which is when the probability of the team scoring goes down when those 5 players are on the floor. These lineups prove hypothesis 2.
 
-For the plot of the distribution I chose Orlando's lineup of Dwight Howard, Jameer Nelson, Matt Barnes, Rashard Lewis, and Vince Carter.
+For the plot of the distribution, I chose Orlando's lineup of Dwight Howard, Jameer Nelson, Matt Barnes, Rashard Lewis, and Vince Carter.
 
 ![alt text](https://github.com/jamesyh/chemistry/blob/master/images/anti-chemistry-index.png)
 ![alt text](https://github.com/jamesyh/chemistry/blob/master/images/orlando-anti-chemistry.png)
