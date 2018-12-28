@@ -2,7 +2,9 @@
 
 People often refer to a group of players as having chemistry or that they play better together than alone. The current warriors have their "death-lineup" which many claim is the best collective group on the floor in today's game. One of my favorite references to chemistry in sports is Ricky Bobby's and his partners "shake-and-bake" where they used team work to win nascar races. For this project I created two seperate bayesian models to compare chemistry. 
 
-The main objective in basketball is to get the ball through the net at a higher rate than your opponets. For this project the dependent variable is wether or not the team scored or not. For model 1 I modeled the dependent variable 
+The main objective in basketball is to get the ball through the net at a higher rate than your opponets. For this project the dependent variable is wether or not the team scored or not. For model 1 I modeled the dependent variable with a Bernoulli likelihood with the parameter ![theta](https://latex.codecogs.com/gif.latex?%7B%5Ctheta_i%7D) where i goes from 1 to the number of unique five player lineups a team has. For the prior I used a Beta distributions with parameters 1 and 1.
+
+
 
 Model 1:<br/>
 Likelihood<br/>
