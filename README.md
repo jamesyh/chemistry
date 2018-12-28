@@ -18,6 +18,14 @@ Priors<br/>
 ![first equation](https://latex.codecogs.com/gif.latex?%7Blogit%28%5Ctheta%29%3D%5Cbeta_0&plus;%5Cbeta_1*I_%7Bplayer_1%7D&plus;...&plus;%5Cbeta_k*I_%7Bplayer_k%7D%7D)<br/>
 ![](https://latex.codecogs.com/gif.latex?%7B%5Cbeta_k%20%24%5Csim%24%20Norm%280%2C1%29%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2C%5C%2Ck%3D1%2C...%2Cl%7D)
 
+There are two seperate hypotheses that I tested using these two models.
+
+Hypothesis 1: The probability of scoring is greater for the lineup modeled in model 1 than the probability of those same 5 players in model 2.
+
+Hypothesis 2: The probability of scoring is greater for 5 players in model 2 than the probability of the corresponding lineup from model 1.
+
+Hypothesis 1 is essentially asking if a specific set of 5 players play better together than they normally do. Hypthesis 2 is asking if there are 5 players who play worse when they are on the court at the same time.
+
 
 ![alt text](https://github.com/jamesyh/chemistry/blob/master/images/chemistry-index.png)
 ![alt text](https://github.com/jamesyh/chemistry/blob/master/images/boston-chemistry.png)
