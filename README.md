@@ -1,4 +1,4 @@
-# Chemistry in 2009-10 NBA data
+# Chemistry in 2009-10 NBA Data
 
 # Introduction
 People often refer to a group of players as having chemistry or that they play better together than alone. The current warriors have their "death-lineup" which many claim is the best collective group on the floor in today's game. One of my favorite references to chemistry in sports is Ricky Bobby's and his partners "shake-and-bake" where they used team work to win nascar races. For this project, I created two separate Bayesian models to compare chemistry. 
